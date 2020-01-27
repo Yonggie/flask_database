@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>demo</title>
+    <style>
+        *{
+            font-size:30px;
+            margin:auto auto;
+         }
+        table tr td{
+            border:1px solid;text-align:center;
+            padding:4px;
+         }
+
+    </style>
+</head>
+<body >
+    <form action="{{url_for('bp.index')}}" method="post">
+        <input type="text" readonly value="delete" name="task"><br>
+        Alter id: <input type="text" name="id">(primary key, cannot be altered.)<br>
+        Alter to Value:<input type="text" name="name"><br>
+        <input type="submit">
+    </form>
+</body>
+</html>

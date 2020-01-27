@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>demo</title>
+    <style>
+        *{
+            font-size:30px;
+            margin:auto auto;
+         }
+        table tr td{
+            border:1px solid;text-align:center;
+            padding:4px;
+         }
+
+    </style>
+</head>
+<body >
+<table class="table-class">
+    <tr>
+        <td colspan="4"> database information table</td>
+    </tr>
+    <tr>
+        <td colspan="2">id</td>
+        <td colspan="2">name</td>
+    </tr>
+    {%for line in infos%}
+    <tr>
+        <td colspan="2">{{line.id}}</td>
+        <td colspan="2">{{line.name}}</td>
+    </tr>
+    {%endfor%}
+    <tr></tr>
+    <tr>
+        <td colspan="1"><a href="{{url_for('bp.insert')}}"><button>insert</button></a></td>
+        <td colspan="1"><a href="{{url_for('bp.delete')}}"><button>delete</button></a></td>
+        <td colspan="1"><a href="#"><button>query</button></a></td>
+        <td colspan="1"><a href="{{url_for('bp.alter')}}"><button>alter</button></a></td>
+    </tr>
+</table>
+</body>
+</html>
